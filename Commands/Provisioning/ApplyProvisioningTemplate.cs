@@ -325,6 +325,8 @@ PS:> Apply-PnPProvisioningTemplate -Path NewTemplate.xml -ExtensibilityHandlers 
             applyingInformation.ClearNavigation = ClearNavigation;
             applyingInformation.ProvisionContentTypesToSubWebs = ProvisionContentTypesToSubWebs;
 
+            var a = 1;
+
             SelectedWeb.ApplyProvisioningTemplate(provisioningTemplate, applyingInformation);
 
             WriteProgress(new ProgressRecord(0, $"Applying template to {SelectedWeb.Url}", " ") { RecordType = ProgressRecordType.Completed });
